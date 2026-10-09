@@ -42,13 +42,17 @@ Docs: https://docs.expo.dev/eas/index.md
 
 ## LocalVoice product and boundaries
 
+- Current owner direction is PC-hosted AI with Android controls; read PC_RUNTIME.md before changing host/runtime behavior. PC mode is the default, with no automatic model download/loading on the phone. PC weights and pairing secrets stay in ignored .localvoice-pc/; verify pinned sizes and streaming SHA-256 before inference.
+- PC inference and emulator Bluetooth are separate capabilities. HFP pairing is not SCO PCM validation, and emulator success is not a physical SIM call test. An external Bluetooth audio adapter is permitted only after its real phone audio path is validated. Keep real automatic answering disconnected until that gate passes.
+- PC stop must terminate and await inference workers and stop playback; any future real-call stop must also hang up its validated adapter. Run npm run pc:test for PC service changes in addition to mobile checks.
+
 - Read PRODUCT.md, DESIGN.md and PLAN.md before changing architecture or interface behavior.
 - Target Android ARM64 on Samsung Galaxy Note10 5G. Web is a UI preview only.
 - Demo calls are synthetic; never present them as real telephony, AI output or benchmarks.
 - The permanent stop control must remain visible during an active call on every route. Real calls must stop native generation, playback and the VoIP session before reporting completion.
 - Keep model assets in app-private storage, pin repository revisions, check file sizes, and require streaming SHA-256 verification before native inference. Do not load multi-GB files into JavaScript memory to hash them.
 - Keep call controller states in deterministic code. The language model cannot grant itself permission to perform actions.
-- No stock Android SIM audio capture/injection claims. Real calls require a validated VoIP gateway and native audio adapter.
+- No stock Android SIM audio capture/injection claims. Real calls require a validated external Bluetooth audio adapter or VoIP gateway and native audio adapter.
 - Downloaded assets are not inference-ready. KittenTTS is experimental until its Android decoder and performance are validated.
 - Store history locally. Current prototype storage is unencrypted; production storage needs encryption, retention, export and deletion controls.
 

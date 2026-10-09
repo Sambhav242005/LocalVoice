@@ -5,6 +5,7 @@ import * as Speech from 'expo-speech';
 import { defaults, incomingDeadline, demoReply, finishCall, stopAndFinish, type Call, type Settings } from './domain';
 import { useModelDownloads } from './downloads';
 import { useModelRuntime } from './runtime';
+import { usePcRuntime } from './pc-runtime';
 
 function useStoreValue() {
   const [settings, setSettings] = useState<Settings>(defaults);
@@ -22,15 +23,16 @@ function useStoreValue() {
   const [incoming, setIncoming] = useState<{ deadline?: number; settings: Settings } | null>(null);
   const incomingRef = useRef<typeof incoming>(null);
   const storageQueue = useRef(Promise.resolve());
-  const downloads = useModelDownloads({ ...settings, autoDownload: ready && settings.autoDownload });
+  const downloads = useModelDownloads({ ...settings, autoDownload: ready && settings.executionHost === 'mobile' && settings.autoDownload });
   const runtime = useModelRuntime(setNotice);
+  const pc = usePcRuntime(settings, ready && settings.executionHost === 'pc', setNotice);
   const autoLoadAttempted = useRef(false);
   useEffect(() => {
-    if (!ready || !settings.autoLoadLfm || !runtime.available || runtime.busy || downloads.activeDownload || downloads.states.llm?.status !== 'downloaded' || autoLoadAttempted.current) return;
+    if (!ready || settings.executionHost !== 'mobile' || !settings.autoLoadLfm || !runtime.available || runtime.busy || downloads.activeDownload || downloads.states.llm?.status !== 'downloaded' || autoLoadAttempted.current) return;
     if (runtime.states.llm?.status === 'ready') return;
     autoLoadAttempted.current = true;
     void runtime.load('llm').catch(error => setNotice(error instanceof Error ? error.message : 'Automatic loading failed. Retry from Models.', 'error'));
-  }, [ready, settings.autoLoadLfm, runtime, downloads.activeDownload, downloads.states.llm?.status, setNotice]);
+  }, [ready, settings.executionHost, settings.autoLoadLfm, runtime, downloads.activeDownload, downloads.states.llm?.status, setNotice]);
   useEffect(() => {
     let mounted = true;
     AsyncStorage.getItem('localvoice.state.v1').then(raw => {
@@ -106,7 +108,7 @@ function useStoreValue() {
     const next = callsRef.current.map(call => call.id === current.id ? { ...call, messages: [...call.messages, { role: 'caller' as const, text: text.trim(), at: now }, { role: 'agent' as const, text: reply, at: now + 1 }] } : call);
     callsRef.current = next;
     setCalls(next);
-    if (settings.speak) {
+    if (settings.speak && settings.executionHost === 'mobile') {
       if (settings.voiceEngine === 'kitten') setNotice('KittenTTS is selected but its Android decoder is unavailable. This reply uses system speech.');
       Speech.speak(reply, { language: current.settings.language, onError: () => setNotice('System speech failed. Check the installed language voice.', 'error') });
     }
@@ -125,7 +127,20 @@ function useStoreValue() {
     finally { ending.current = false; }
   };
   const retryLoad = () => { setLoadFailed(false); setNotice('Retrying saved data…'); setLoadAttempt(value => value + 1); };
-  return { settings, setSettings, calls, ready, notice, noticeKind, setNotice, loadFailed, retryLoad, active, clock, startDemo, send, end, downloads, runtime, incoming, simulateIncoming, approveIncoming, dismissIncoming };
+  const changeExecutionHost = async (host: Settings['executionHost']) => {
+    if (host === settings.executionHost) return;
+    if (runtime.busy || pc.busy) throw new Error('Stop the current inference or wait for loading before changing the AI host.');
+    if (host === 'pc') {
+      await downloads.pause();
+      await runtime.stop();
+      for (const id of ['llm', 'asr']) if (runtime.states[id] && runtime.states[id].status !== 'unloaded') await runtime.unload(id);
+      await Speech.stop();
+    } else if (pc.connected) {
+      await pc.stop();
+    }
+    setSettings(old => ({ ...old, executionHost: host }));
+  };
+  return { settings, setSettings, calls, ready, notice, noticeKind, setNotice, loadFailed, retryLoad, active, clock, startDemo, send, end, downloads, runtime, pc, changeExecutionHost, incoming, simulateIncoming, approveIncoming, dismissIncoming };
 }
 type Store = ReturnType<typeof useStoreValue>;
 const Context = createContext<Store | null>(null);

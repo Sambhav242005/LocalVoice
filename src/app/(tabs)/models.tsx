@@ -3,11 +3,13 @@ import { Platform, Switch, TextInput, View } from 'react-native';
 import { useStore } from '../../core/store';
 import { models } from '../../core/downloads';
 import { Button, Panel, Row, Screen, Txt, useTheme } from '../../components/ui';
+import { PcRuntime } from '../../components/PcRuntime';
 export default function Models() {
   const theme = useTheme();
   const { downloads, settings, setSettings, setNotice, runtime } = useStore();
   const [prompt, setPrompt] = useState('Say hello in one short sentence.');
   const run = (action: () => Promise<void>) => { void action().catch(error => setNotice(error instanceof Error ? error.message : 'Action failed.', 'error')); };
+  if (settings.executionHost === 'pc') return <Screen title="PC model runtime" subtitle="Your computer hosts the models. This device is the remote dashboard."><PcRuntime /></Screen>;
   return <Screen title="Model library" subtitle="Download pinned assets. Native runtime readiness is a separate step.">
     <Panel><Txt kind="title">{settings.autoDownload ? 'Automatic download mode is on' : 'Choose when to download'}</Txt><Txt color={theme.muted}>Downloads run one bundle at a time while the app is open. Interrupted downloads can be resumed. KittenTTS requires experimental opt-in.</Txt><Button label={settings.autoDownload ? 'Disable automatic downloads' : 'Enable automatic downloads'} secondary disabled={Platform.OS === 'web'} onPress={() => setSettings(old => ({ ...old, autoDownload: !old.autoDownload }))} /></Panel>
     {Platform.OS === 'web' && <Panel><Txt>Web preview: download controls are available in the Android app.</Txt></Panel>}

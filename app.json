@@ -19,7 +19,7 @@
       },
       "predictiveBackGestureEnabled": true,
       "package": "com.localvoice.app",
-      "permissions": ["android.permission.RECORD_AUDIO", "android.permission.POST_NOTIFICATIONS"]
+      "permissions": ["android.permission.RECORD_AUDIO", "android.permission.POST_NOTIFICATIONS", "android.permission.BLUETOOTH_CONNECT"]
     },
     "web": {
       "favicon": "./assets/favicon.png"

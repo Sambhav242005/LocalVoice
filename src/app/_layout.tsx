@@ -7,9 +7,11 @@ import { StoreProvider, useStore } from '../core/store';
 import { Button, Txt, formatDuration, useTheme } from '../components/ui';
 function Shell() {
   const theme = useTheme();
-  const { active, clock, end, incoming, approveIncoming, dismissIncoming } = useStore();
+  const { active, clock, end, incoming, approveIncoming, dismissIncoming, settings, pc, setNotice } = useStore();
+  const pcResident = Object.values(pc.states).some(model => ['ready', 'loaded', 'loading'].includes(model.status));
   return <SafeAreaView style={{ flex: 1, backgroundColor: theme.background }} edges={['top', 'bottom']}>
     <StatusBar style={theme.dark ? 'light' : 'dark'} />
+    {settings.executionHost === 'pc' && pc.connected && (pc.busy || pcResident) && <View style={{ padding: 12, gap: 8, backgroundColor: theme.tinted }}><Txt kind="small">PC AI · {pc.busy ? 'Processing' : 'Models in memory'}</Txt><Button label="Stop PC AI" danger icon="stop-circle-outline" onPress={() => { void pc.stop().catch(error => setNotice(error instanceof Error ? error.message : 'PC stop failed. Retry.', 'error')); }} /></View>}
     {incoming && <View style={{ padding: 12, gap: 8, backgroundColor: theme.tinted }}>
       <Txt>Incoming demo call</Txt>
       <Txt kind="small">{incoming.deadline ? `AI answers in ${Math.max(0, Math.ceil((incoming.deadline - clock) / 1000))} seconds unless you answer or decline.` : 'AI waits for your approval.'}</Txt>

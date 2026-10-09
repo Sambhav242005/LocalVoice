@@ -1,0 +1,6 @@
+bumble[android]==0.0.235
+kittenml==0.9.4
+transformers==5.19.0
+accelerate==1.15.0
+soundfile==0.14.0
+# Install matching torch/torchaudio CUDA wheels separately; see PC_RUNTIME.md.

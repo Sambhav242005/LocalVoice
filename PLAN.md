@@ -1,10 +1,18 @@
 # LocalVoice implementation plan
 
+## Current PC direction
+
+The owner now wants all AI on the PC, with the Android app providing controls and monitoring. [PC_RUNTIME.md](PC_RUNTIME.md) is the current architecture, runbook and remaining implementation plan. The stages below describe the earlier phone-native/VoIP direction and remain background context, not evidence that SIM calling works.
+
+PC mode is implemented as the default: authenticated localhost service, PC-only model downloads/loading, LFM generation, finite-WAV Nemotron transcription, KittenTTS synthesis and Windows speaker preview. The Models screen reports PC readiness separately from emulator HFP/SCO status. Physical SIM call audio, live conversational audio and AI summaries remain pending validation/integration.
+
 ## Outcome
 
 An Expo React Native Android app that answers VoIP calls with local English/Hindi models, lets its owner monitor and stop conversations, and provides searchable summaries. Customization lets the owner try preferred themes, voice settings and operating profiles. Samsung Note10 5G ARM64 is the initial device.
 
 ## Current delivery
+
+The remaining sections record the earlier mobile milestone. Statements about missing inference or absent workstation weights below apply to that historical milestone, not the current PC runtime. Current evidence and acceptance gates are in PC_VALIDATION.md and PC_RUNTIME.md.
 
 The project began empty. This first milestone provides Expo SDK 57 / React Native 0.86 / React 19, Expo Router, a teal dashboard, light/dark/system themes, customizable settings, labeled demo conversations, searchable history, persisted transcripts, transcript-based recaps, and stop controls. The model manager downloads real pinned asset bundles on native Android, checks sizes, tracks progress, supports pause/resume and Wi-Fi policy, and offers opt-in automatic foreground downloads. Native download behavior has not been device-tested. No model weights were downloaded to this workstation.
 

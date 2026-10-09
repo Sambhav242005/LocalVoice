@@ -1,8 +1,8 @@
 export type Language = 'en-IN' | 'hi-IN';
 export type Message = { role: 'caller' | 'agent'; text: string; at: number };
 export type Call = { id: string; name: string; startedAt: number; endedAt?: number; status: 'active' | 'completed' | 'stopped'; messages: Message[]; summary?: string; demo: true; settings: Settings };
-export type Settings = { theme: 'light' | 'dark' | 'system'; language: Language; detail: 'simple' | 'detailed'; autoDownload: boolean; autoLoadLfm: boolean; wifiOnly: boolean; experimental: boolean; speak: boolean; voiceEngine: 'system' | 'kitten'; answerMode: 'manual' | 'unanswered'; answerDelay: number; instructions: string };
-export const defaults: Settings = { theme: 'light', language: 'en-IN', detail: 'simple', autoDownload: false, autoLoadLfm: false, wifiOnly: true, experimental: false, speak: false, voiceEngine: 'system', answerMode: 'manual', answerDelay: 20, instructions: 'Be brief and helpful. Identify yourself as an AI assistant. Never promise actions you cannot perform.' };
+export type Settings = { executionHost: 'pc' | 'mobile'; pcUrl: string; pcToken: string; theme: 'light' | 'dark' | 'system'; language: Language; detail: 'simple' | 'detailed'; autoDownload: boolean; autoLoadLfm: boolean; wifiOnly: boolean; experimental: boolean; speak: boolean; voiceEngine: 'system' | 'kitten'; answerMode: 'manual' | 'unanswered'; answerDelay: number; instructions: string };
+export const defaults: Settings = { executionHost: 'pc', pcUrl: 'http://127.0.0.1:8090', pcToken: '', theme: 'light', language: 'en-IN', detail: 'simple', autoDownload: false, autoLoadLfm: false, wifiOnly: true, experimental: false, speak: false, voiceEngine: 'system', answerMode: 'manual', answerDelay: 20, instructions: 'Be brief and helpful. Identify yourself as an AI assistant. Never promise actions you cannot perform.' };
 export function summarize(messages: Message[], stopped: boolean): string {
   const caller = messages.filter(message => message.role === 'caller');
   if (!caller.length) return stopped ? 'Stopped by owner before the caller spoke.' : 'Call ended without a caller message.';

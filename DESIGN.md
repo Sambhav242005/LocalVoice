@@ -116,6 +116,12 @@ components:
 
 # Design System: LocalVoice
 
+## PC controller mode
+
+PC mode is the default. Models shows the PC address and masked pairing token, connection state, per-model download/load state, readiness notices, measured request duration, PC prompt test, KittenTTS speaker preview and a stop/release action. Phone downloads and automatic native loading are disabled in this mode. Settings keeps the earlier mobile experiment as an explicit alternative. The Overview pipeline displays the selected host's state.
+
+Bluetooth diagnostics distinguish advertising, HFP connection, SCO connection and received bytes; stale probe reports are disconnected. Emulator calls are synthetic. Do not label a successful HFP link as validated physical SIM audio. The phone's existing demo-call controls remain scripted and separate from PC inference.
+
 ## Overview
 
 **Creative North Star: "Teal timeline dashboard"**
@@ -221,3 +227,5 @@ The finish review resolved six findings: stop failure retains active retry; the 
 Voice engine selection in Settings offers Android system speech and experimental KittenTTS. The saved preference and active engine are shown separately while the KittenTTS Android decoder is unavailable; spoken replies visibly report system speech fallback. A shortcut opens model downloads.
 
 Incoming approval: persistent demo ringing controls offer Let AI answer, Answer myself, and Decline. Default manual approval; optional unanswered timeout 10/20/30/45 seconds. Leaving foreground cancels ringing. Permissions setup explains microphone and notifications, supports OS requests and blocked-permission recovery. Real call integration remains pending.
+
+Bluetooth permission setup: Settings offers an explicit Android 12+ Nearby devices request for already-paired devices. Protected audio capture/routing cannot be approved through a popup; the UI states that Bluetooth approval does not enable virtual headsets or SIM audio access. Older Android versions show when no runtime prompt is required.

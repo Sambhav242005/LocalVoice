@@ -38,7 +38,11 @@
     "lint": "expo lint",
     "typecheck": "tsc --noEmit",
     "test": "node --experimental-strip-types --test tests/*.test.mjs",
-    "android:build": "expo run:android"
+    "android:build": "expo run:android",
+    "pc:setup": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/setup-pc.ps1",
+    "pc:start": ".venv-pc\\Scripts\\python.exe pc/server.py",
+    "pc:bluetooth-test": ".venv-pc\\Scripts\\python.exe pc/bluetooth_probe.py",
+    "pc:test": ".venv-pc\\Scripts\\python.exe -m unittest discover -s pc/tests"
   },
   "private": true
 }

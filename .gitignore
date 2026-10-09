@@ -66,6 +66,9 @@ local.properties
 __pycache__/
 *.py[cod]
 .venv/
+.venv-pc/
+.venv-bt/
+.localvoice-pc/
 
 # Machine-local tooling state
 .claude/
