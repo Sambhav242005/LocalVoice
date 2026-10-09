@@ -1,0 +1,457 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-08T19:38:18.020953+00:00",
+  "title": "Design System: LocalVoice",
+  "extensions": {
+    "colorMeta": {
+      "light-background": {
+        "role": "neutral",
+        "displayName": "Light Background",
+        "tonalRamp": [
+          "oklch(15% 0.0053 197.07)",
+          "oklch(26% 0.0053 197.07)",
+          "oklch(38% 0.0053 197.07)",
+          "oklch(49% 0.0053 197.07)",
+          "oklch(61% 0.0053 197.07)",
+          "oklch(72% 0.0053 197.07)",
+          "oklch(84% 0.0053 197.07)",
+          "oklch(95% 0.0053 197.07)"
+        ]
+      },
+      "light-surface": {
+        "role": "neutral",
+        "displayName": "Light Surface",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "light-tinted": {
+        "role": "primary",
+        "displayName": "Light Tinted",
+        "tonalRamp": [
+          "oklch(15% 0.0201 177.44)",
+          "oklch(26% 0.0201 177.44)",
+          "oklch(38% 0.0201 177.44)",
+          "oklch(49% 0.0201 177.44)",
+          "oklch(61% 0.0201 177.44)",
+          "oklch(72% 0.0201 177.44)",
+          "oklch(84% 0.0201 177.44)",
+          "oklch(95% 0.0201 177.44)"
+        ]
+      },
+      "light-primary": {
+        "role": "primary",
+        "displayName": "Light Primary",
+        "tonalRamp": [
+          "oklch(15% 0.0845 180.40)",
+          "oklch(26% 0.0845 180.40)",
+          "oklch(38% 0.0845 180.40)",
+          "oklch(49% 0.0845 180.40)",
+          "oklch(61% 0.0845 180.40)",
+          "oklch(72% 0.0845 180.40)",
+          "oklch(84% 0.0845 180.40)",
+          "oklch(95% 0.0845 180.40)"
+        ]
+      },
+      "light-on-primary": {
+        "role": "primary",
+        "displayName": "Light On Primary",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "light-text": {
+        "role": "neutral",
+        "displayName": "Light Text",
+        "tonalRamp": [
+          "oklch(15% 0.0336 186.08)",
+          "oklch(26% 0.0336 186.08)",
+          "oklch(38% 0.0336 186.08)",
+          "oklch(49% 0.0336 186.08)",
+          "oklch(61% 0.0336 186.08)",
+          "oklch(72% 0.0336 186.08)",
+          "oklch(84% 0.0336 186.08)",
+          "oklch(95% 0.0336 186.08)"
+        ]
+      },
+      "light-muted": {
+        "role": "neutral",
+        "displayName": "Light Muted",
+        "tonalRamp": [
+          "oklch(15% 0.0313 187.36)",
+          "oklch(26% 0.0313 187.36)",
+          "oklch(38% 0.0313 187.36)",
+          "oklch(49% 0.0313 187.36)",
+          "oklch(61% 0.0313 187.36)",
+          "oklch(72% 0.0313 187.36)",
+          "oklch(84% 0.0313 187.36)",
+          "oklch(95% 0.0313 187.36)"
+        ]
+      },
+      "light-outline": {
+        "role": "neutral",
+        "displayName": "Light Outline",
+        "tonalRamp": [
+          "oklch(15% 0.0268 184.54)",
+          "oklch(26% 0.0268 184.54)",
+          "oklch(38% 0.0268 184.54)",
+          "oklch(49% 0.0268 184.54)",
+          "oklch(61% 0.0268 184.54)",
+          "oklch(72% 0.0268 184.54)",
+          "oklch(84% 0.0268 184.54)",
+          "oklch(95% 0.0268 184.54)"
+        ]
+      },
+      "light-error": {
+        "role": "neutral",
+        "displayName": "Light Error",
+        "tonalRamp": [
+          "oklch(15% 0.1793 21.80)",
+          "oklch(26% 0.1793 21.80)",
+          "oklch(38% 0.1793 21.80)",
+          "oklch(49% 0.1793 21.80)",
+          "oklch(61% 0.1793 21.80)",
+          "oklch(72% 0.1793 21.80)",
+          "oklch(84% 0.1793 21.80)",
+          "oklch(95% 0.1793 21.80)"
+        ]
+      },
+      "light-header": {
+        "role": "primary",
+        "displayName": "Light Header",
+        "tonalRamp": [
+          "oklch(15% 0.0735 181.66)",
+          "oklch(26% 0.0735 181.66)",
+          "oklch(38% 0.0735 181.66)",
+          "oklch(49% 0.0735 181.66)",
+          "oklch(61% 0.0735 181.66)",
+          "oklch(72% 0.0735 181.66)",
+          "oklch(84% 0.0735 181.66)",
+          "oklch(95% 0.0735 181.66)"
+        ]
+      },
+      "dark-background": {
+        "role": "neutral",
+        "displayName": "Dark Background",
+        "tonalRamp": [
+          "oklch(15% 0.0183 189.82)",
+          "oklch(26% 0.0183 189.82)",
+          "oklch(38% 0.0183 189.82)",
+          "oklch(49% 0.0183 189.82)",
+          "oklch(61% 0.0183 189.82)",
+          "oklch(72% 0.0183 189.82)",
+          "oklch(84% 0.0183 189.82)",
+          "oklch(95% 0.0183 189.82)"
+        ]
+      },
+      "dark-surface": {
+        "role": "neutral",
+        "displayName": "Dark Surface",
+        "tonalRamp": [
+          "oklch(15% 0.0245 182.84)",
+          "oklch(26% 0.0245 182.84)",
+          "oklch(38% 0.0245 182.84)",
+          "oklch(49% 0.0245 182.84)",
+          "oklch(61% 0.0245 182.84)",
+          "oklch(72% 0.0245 182.84)",
+          "oklch(84% 0.0245 182.84)",
+          "oklch(95% 0.0245 182.84)"
+        ]
+      },
+      "dark-tinted": {
+        "role": "primary",
+        "displayName": "Dark Tinted",
+        "tonalRamp": [
+          "oklch(15% 0.0415 176.53)",
+          "oklch(26% 0.0415 176.53)",
+          "oklch(38% 0.0415 176.53)",
+          "oklch(49% 0.0415 176.53)",
+          "oklch(61% 0.0415 176.53)",
+          "oklch(72% 0.0415 176.53)",
+          "oklch(84% 0.0415 176.53)",
+          "oklch(95% 0.0415 176.53)"
+        ]
+      },
+      "dark-primary": {
+        "role": "primary",
+        "displayName": "Dark Primary",
+        "tonalRamp": [
+          "oklch(15% 0.0825 176.15)",
+          "oklch(26% 0.0825 176.15)",
+          "oklch(38% 0.0825 176.15)",
+          "oklch(49% 0.0825 176.15)",
+          "oklch(61% 0.0825 176.15)",
+          "oklch(72% 0.0825 176.15)",
+          "oklch(84% 0.0825 176.15)",
+          "oklch(95% 0.0825 176.15)"
+        ]
+      },
+      "dark-on-primary": {
+        "role": "primary",
+        "displayName": "Dark On Primary",
+        "tonalRamp": [
+          "oklch(15% 0.0561 178.07)",
+          "oklch(26% 0.0561 178.07)",
+          "oklch(38% 0.0561 178.07)",
+          "oklch(49% 0.0561 178.07)",
+          "oklch(61% 0.0561 178.07)",
+          "oklch(72% 0.0561 178.07)",
+          "oklch(84% 0.0561 178.07)",
+          "oklch(95% 0.0561 178.07)"
+        ]
+      },
+      "dark-text": {
+        "role": "neutral",
+        "displayName": "Dark Text",
+        "tonalRamp": [
+          "oklch(15% 0.0147 175.72)",
+          "oklch(26% 0.0147 175.72)",
+          "oklch(38% 0.0147 175.72)",
+          "oklch(49% 0.0147 175.72)",
+          "oklch(61% 0.0147 175.72)",
+          "oklch(72% 0.0147 175.72)",
+          "oklch(84% 0.0147 175.72)",
+          "oklch(95% 0.0147 175.72)"
+        ]
+      },
+      "dark-muted": {
+        "role": "neutral",
+        "displayName": "Dark Muted",
+        "tonalRamp": [
+          "oklch(15% 0.0257 174.57)",
+          "oklch(26% 0.0257 174.57)",
+          "oklch(38% 0.0257 174.57)",
+          "oklch(49% 0.0257 174.57)",
+          "oklch(61% 0.0257 174.57)",
+          "oklch(72% 0.0257 174.57)",
+          "oklch(84% 0.0257 174.57)",
+          "oklch(95% 0.0257 174.57)"
+        ]
+      },
+      "dark-outline": {
+        "role": "neutral",
+        "displayName": "Dark Outline",
+        "tonalRamp": [
+          "oklch(15% 0.0397 176.30)",
+          "oklch(26% 0.0397 176.30)",
+          "oklch(38% 0.0397 176.30)",
+          "oklch(49% 0.0397 176.30)",
+          "oklch(61% 0.0397 176.30)",
+          "oklch(72% 0.0397 176.30)",
+          "oklch(84% 0.0397 176.30)",
+          "oklch(95% 0.0397 176.30)"
+        ]
+      },
+      "dark-error": {
+        "role": "neutral",
+        "displayName": "Dark Error",
+        "tonalRamp": [
+          "oklch(15% 0.0994 12.44)",
+          "oklch(26% 0.0994 12.44)",
+          "oklch(38% 0.0994 12.44)",
+          "oklch(49% 0.0994 12.44)",
+          "oklch(61% 0.0994 12.44)",
+          "oklch(72% 0.0994 12.44)",
+          "oklch(84% 0.0994 12.44)",
+          "oklch(95% 0.0994 12.44)"
+        ]
+      },
+      "dark-header": {
+        "role": "primary",
+        "displayName": "Dark Header",
+        "tonalRamp": [
+          "oklch(15% 0.0498 177.72)",
+          "oklch(26% 0.0498 177.72)",
+          "oklch(38% 0.0498 177.72)",
+          "oklch(49% 0.0498 177.72)",
+          "oklch(61% 0.0498 177.72)",
+          "oklch(72% 0.0498 177.72)",
+          "oklch(84% 0.0498 177.72)",
+          "oklch(95% 0.0498 177.72)"
+        ]
+      },
+      "header-text": {
+        "role": "primary",
+        "displayName": "Header Text",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "header-supporting": {
+        "role": "primary",
+        "displayName": "Header Supporting",
+        "tonalRamp": [
+          "oklch(15% 0.0245 177.63)",
+          "oklch(26% 0.0245 177.63)",
+          "oklch(38% 0.0245 177.63)",
+          "oklch(49% 0.0245 177.63)",
+          "oklch(61% 0.0245 177.63)",
+          "oklch(72% 0.0245 177.63)",
+          "oklch(84% 0.0245 177.63)",
+          "oklch(95% 0.0245 177.63)"
+        ]
+      },
+      "dark-on-error": {
+        "role": "neutral",
+        "displayName": "Dark On Error",
+        "tonalRamp": [
+          "oklch(15% 0.0965 20.41)",
+          "oklch(26% 0.0965 20.41)",
+          "oklch(38% 0.0965 20.41)",
+          "oklch(49% 0.0965 20.41)",
+          "oklch(61% 0.0965 20.41)",
+          "oklch(72% 0.0965 20.41)",
+          "oklch(84% 0.0965 20.41)",
+          "oklch(95% 0.0965 20.41)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Screen heading"
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Section, call and panel heading"
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Reading content"
+      },
+      "small": {
+        "displayName": "Small",
+        "purpose": "Supporting detail and timestamps"
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Button text"
+      },
+      "tab-label": {
+        "displayName": "Tab Label",
+        "purpose": "Native navigation label"
+      },
+      "input": {
+        "displayName": "Input",
+        "purpose": "Native field text"
+      }
+    },
+    "shadows": [],
+    "motion": [],
+    "breakpoints": []
+  },
+  "components": [
+    {
+      "name": "Primary button",
+      "kind": "button",
+      "refersTo": "button-primary-light",
+      "description": "HTML panel translation of the native control; focus-visible uses the browser default, and hover stays unchanged because native code has no hover variant.",
+      "html": "<button class=\"ds-button-primary-light\">Start a demo call</button>",
+      "css": ".ds-button-primary-light { background:#00695C; color:#FFFFFF; min-height:48px; padding:12px 20px; border:0; border-radius:12px; font-family:system-ui,sans-serif; font-size:16px; font-weight:600; } .ds-button-primary-light:hover { background:#00695C; } .ds-button-primary-light:focus-visible { outline:auto; } .ds-button-primary-light:active { opacity:.8; } .ds-button-primary-light:disabled { opacity:.45; }"
+    },
+    {
+      "name": "Dark primary button",
+      "kind": "button",
+      "refersTo": "button-primary-dark",
+      "description": "HTML panel translation of the native control; focus-visible uses the browser default, and hover stays unchanged because native code has no hover variant.",
+      "html": "<button class=\"ds-button-primary-dark\">Start a demo call</button>",
+      "css": ".ds-button-primary-dark { background:#8CDAC6; color:#00382F; min-height:48px; padding:12px 20px; border:0; border-radius:12px; font-family:system-ui,sans-serif; font-size:16px; font-weight:600; } .ds-button-primary-dark:hover { background:#8CDAC6; } .ds-button-primary-dark:focus-visible { outline:auto; } .ds-button-primary-dark:active { opacity:.8; } .ds-button-primary-dark:disabled { opacity:.45; }"
+    },
+    {
+      "name": "Secondary button",
+      "kind": "button",
+      "refersTo": "button-secondary-light",
+      "description": "HTML panel translation of the native control; focus-visible uses the browser default, and hover stays unchanged because native code has no hover variant.",
+      "html": "<button class=\"ds-button-secondary-light\">Start a demo call</button>",
+      "css": ".ds-button-secondary-light { background:#DDEFEA; color:#00695C; min-height:48px; padding:12px 20px; border:0; border-radius:12px; font-family:system-ui,sans-serif; font-size:16px; font-weight:600; } .ds-button-secondary-light:hover { background:#DDEFEA; } .ds-button-secondary-light:focus-visible { outline:auto; } .ds-button-secondary-light:active { opacity:.8; } .ds-button-secondary-light:disabled { opacity:.45; }"
+    },
+    {
+      "name": "Danger button",
+      "kind": "button",
+      "refersTo": "button-danger-light",
+      "description": "HTML panel translation of the native control; focus-visible uses the browser default, and hover stays unchanged because native code has no hover variant.",
+      "html": "<button class=\"ds-button-danger-light\">End call now</button>",
+      "css": ".ds-button-danger-light { background:#B42332; color:#FFFFFF; min-height:48px; padding:12px 20px; border:0; border-radius:12px; font-family:system-ui,sans-serif; font-size:16px; font-weight:600; } .ds-button-danger-light:hover { background:#B42332; } .ds-button-danger-light:focus-visible { outline:auto; } .ds-button-danger-light:active { opacity:.8; } .ds-button-danger-light:disabled { opacity:.45; }"
+    },
+    {
+      "name": "Dark danger button",
+      "kind": "button",
+      "refersTo": "button-danger-dark",
+      "description": "HTML panel translation of the native control; focus-visible uses the browser default, and hover stays unchanged because native code has no hover variant.",
+      "html": "<button class=\"ds-button-danger-dark\">End call now</button>",
+      "css": ".ds-button-danger-dark { background:#FFABB4; color:#4A0710; min-height:48px; padding:12px 20px; border:0; border-radius:12px; font-family:system-ui,sans-serif; font-size:16px; font-weight:600; } .ds-button-danger-dark:hover { background:#FFABB4; } .ds-button-danger-dark:focus-visible { outline:auto; } .ds-button-danger-dark:active { opacity:.8; } .ds-button-danger-dark:disabled { opacity:.45; }"
+    },
+    {
+      "name": "Panel",
+      "kind": "card",
+      "refersTo": "panel-light",
+      "description": "Flat native surface translated to HTML.",
+      "html": "<section class=\"ds-panel\"><strong>Transcript</strong><span>Scripted demo content</span></section>",
+      "css": ".ds-panel { background:#FFFFFF; color:#142F2C; padding:20px; border-radius:16px; display:flex; flex-direction:column; gap:14px; font-family:system-ui,sans-serif; font-size:16px; line-height:24px; }"
+    },
+    {
+      "name": "Caller message input",
+      "kind": "input",
+      "refersTo": "input-light",
+      "description": "Native text-field translation; browser focus outline is preview-only.",
+      "html": "<textarea class=\"ds-input\" aria-label=\"Caller message\" placeholder=\"What would the caller say?\"></textarea>",
+      "css": ".ds-input { min-height:52px; padding:14px; border:1px solid #A7BFBB; border-radius:12px; background:#FFFFFF; color:#142F2C; font-family:system-ui,sans-serif; font-size:16px; } .ds-input::placeholder { color:#48625F; } .ds-input:hover { border-color:#A7BFBB; } .ds-input:focus-visible { outline:auto; }"
+    },
+    {
+      "name": "Bottom navigation",
+      "kind": "nav",
+      "description": "Text-only preview of native four-destination navigation; actual implementation also uses Ionicons and navigator-managed states.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Main\"><button aria-current=\"page\">Overview</button><button>Calls</button><button>Models</button><button>Settings</button></nav>",
+      "css": ".ds-nav { display:flex; min-height:64px; padding-bottom:8px; background:#FFFFFF; border-top:1px solid #A7BFBB; } .ds-nav button { flex:1; border:0; background:transparent; color:#48625F; font-family:system-ui,sans-serif; font-size:12px; } .ds-nav button[aria-current] { color:#00695C; } .ds-nav button:hover { background:transparent; } .ds-nav button:focus-visible { outline:auto; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Teal timeline dashboard",
+    "overview": "The user chose a readable teal timeline direction with customization. Cool surfaces, clear system type and flat information rows support Android phone operation. Conversation content and controls take priority over ornament; detailed diagnostics are an optional preference.\n\nThis is a code-led build, with no approved image composition or generated raster assets. The present finish disposition is ship as an explicitly labeled demo and asset-manager foundation. Native finish approval remains pending device evidence. The light Overview and dark Settings screenshots at `.impeccable/review/web-phone.png` and `.impeccable/review/web-dark.png` are web previews only; no connected adb devices were available.",
+    "keyCharacteristics": [
+      "Teal actions and tonal surfaces in light and dark themes.",
+      "Native system typography and readable transcript rows.",
+      "Persistent active-call stop control across routes.",
+      "Explicit demo, missing-integration and unmeasured-state labels."
+    ],
+    "rules": [
+      {
+        "name": "Semantic Theme",
+        "body": "Choose colors by the current theme role; preserve separate informational and error notice colors.",
+        "section": "colors"
+      }
+    ],
+    "dos": [
+      "Do use theme roles, shared type roles and the existing flat panel language.",
+      "Do keep the persistent stop control reachable during an active call on every route.",
+      "Do label synthetic calls, scripted responses, missing runtimes and unmeasured diagnostics explicitly.",
+      "Do preserve selected accessibility states and native touch targets."
+    ],
+    "donts": [
+      "Don't present web previews as Android runtime or audio evidence.",
+      "Don't present downloaded assets as inference-ready or demo content as real AI or telephony output.",
+      "Don't replace native system type or add decorative elevation without a deliberate design revision."
+    ]
+  }
+}

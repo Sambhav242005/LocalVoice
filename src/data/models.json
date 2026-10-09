@@ -1,0 +1,143 @@
+[
+  {
+    "id": "asr",
+    "name": "Nemotron 3.5 ASR",
+    "role": "Speech recognition",
+    "repo": "onnx-community/nemotron-3.5-asr-streaming-0.6b-onnx-int4",
+    "experimental": false,
+    "files": [
+      {
+        "path": "encoder.onnx",
+        "bytes": 2677548,
+        "sha256": "0b05217594ec0bda442e43a90a298ac2471a3bdcea9b169de34214e61a730e17",
+        "url": "https://huggingface.co/onnx-community/nemotron-3.5-asr-streaming-0.6b-onnx-int4/resolve/8364d9e2dd9da23789b480bdbba9e423717e42ee/encoder.onnx"
+      },
+      {
+        "path": "encoder.onnx.data",
+        "bytes": 690089984,
+        "sha256": "2f27295855aeb99ab1f8cd2254418d9ad7a087ea8dbe85f5596b4d887ea7d630",
+        "url": "https://huggingface.co/onnx-community/nemotron-3.5-asr-streaming-0.6b-onnx-int4/resolve/8364d9e2dd9da23789b480bdbba9e423717e42ee/encoder.onnx.data"
+      },
+      {
+        "path": "decoder.onnx",
+        "bytes": 4696,
+        "sha256": "6a9f608dcbab71ebd81ffa4c198e82a5b6bb10f1c1830a94c752c5f543454df3",
+        "url": "https://huggingface.co/onnx-community/nemotron-3.5-asr-streaming-0.6b-onnx-int4/resolve/8364d9e2dd9da23789b480bdbba9e423717e42ee/decoder.onnx"
+      },
+      {
+        "path": "decoder.onnx.data",
+        "bytes": 59785216,
+        "sha256": "e5fd55cbeeb268f9d383e2ee72735b9fbbb13aea4bc7cd38cb73b8e16f1366c7",
+        "url": "https://huggingface.co/onnx-community/nemotron-3.5-asr-streaming-0.6b-onnx-int4/resolve/8364d9e2dd9da23789b480bdbba9e423717e42ee/decoder.onnx.data"
+      },
+      {
+        "path": "joint.onnx",
+        "bytes": 2136,
+        "sha256": "e2c7d2fa40a243bf82eaca36c15698c52129de9361d2875d7f223f67fcd9482d",
+        "url": "https://huggingface.co/onnx-community/nemotron-3.5-asr-streaming-0.6b-onnx-int4/resolve/8364d9e2dd9da23789b480bdbba9e423717e42ee/joint.onnx"
+      },
+      {
+        "path": "joint.onnx.data",
+        "bytes": 37830656,
+        "sha256": "2e0fb1c060f3777a1a76e78d5589dd54f01505a06dffbd2588e315508b402c12",
+        "url": "https://huggingface.co/onnx-community/nemotron-3.5-asr-streaming-0.6b-onnx-int4/resolve/8364d9e2dd9da23789b480bdbba9e423717e42ee/joint.onnx.data"
+      },
+      {
+        "path": "silero_vad.onnx",
+        "bytes": 2243022,
+        "sha256": "a4a068cd6cf1ea8355b84327595838ca748ec29a25bc91fc82e6c299ccdc5808",
+        "url": "https://huggingface.co/onnx-community/nemotron-3.5-asr-streaming-0.6b-onnx-int4/resolve/8364d9e2dd9da23789b480bdbba9e423717e42ee/silero_vad.onnx"
+      },
+      {
+        "path": "audio_processor_config.json",
+        "bytes": 413,
+        "sha256": "ab28d41eb87ce3922006edeb9c3fad4d5ce451f9a56a12d84f470f02a5ec157b",
+        "url": "https://huggingface.co/onnx-community/nemotron-3.5-asr-streaming-0.6b-onnx-int4/resolve/8364d9e2dd9da23789b480bdbba9e423717e42ee/audio_processor_config.json"
+      },
+      {
+        "path": "model_config.json",
+        "bytes": 365,
+        "sha256": "f41f943eeb1310a89dd58cf3e11e654a8ae1a788fceeb6cd1eacce3a6d081965",
+        "url": "https://huggingface.co/onnx-community/nemotron-3.5-asr-streaming-0.6b-onnx-int4/resolve/8364d9e2dd9da23789b480bdbba9e423717e42ee/model_config.json"
+      },
+      {
+        "path": "genai_config.json",
+        "bytes": 1892,
+        "sha256": "39568fbeebbe848696a1e2a01c7f33df000f72c29f2285509fd12442bda9571e",
+        "url": "https://huggingface.co/onnx-community/nemotron-3.5-asr-streaming-0.6b-onnx-int4/resolve/8364d9e2dd9da23789b480bdbba9e423717e42ee/genai_config.json"
+      },
+      {
+        "path": "tokenizer.json",
+        "bytes": 642525,
+        "sha256": "24e1e8335c8396884a86f06880271376ae46a29381cfc35c82c6295d407acec7",
+        "url": "https://huggingface.co/onnx-community/nemotron-3.5-asr-streaming-0.6b-onnx-int4/resolve/8364d9e2dd9da23789b480bdbba9e423717e42ee/tokenizer.json"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "bytes": 183,
+        "sha256": "ea4b35353f468fea11f436f837d9621a29b4ba9d1c73c1ed0aa5743f5a53919e",
+        "url": "https://huggingface.co/onnx-community/nemotron-3.5-asr-streaming-0.6b-onnx-int4/resolve/8364d9e2dd9da23789b480bdbba9e423717e42ee/tokenizer_config.json"
+      },
+      {
+        "path": "vocab.txt",
+        "bytes": 64024,
+        "sha256": "ca88922ac5a92c911b79985b69634d7a4c2ef604d61b71bbe2982210dd77cd43",
+        "url": "https://huggingface.co/onnx-community/nemotron-3.5-asr-streaming-0.6b-onnx-int4/resolve/8364d9e2dd9da23789b480bdbba9e423717e42ee/vocab.txt"
+      }
+    ],
+    "revision": "8364d9e2dd9da23789b480bdbba9e423717e42ee",
+    "bytes": 793342660
+  },
+  {
+    "id": "llm",
+    "name": "LFM2.5-2.6B",
+    "role": "Conversation",
+    "repo": "LiquidAI/LFM2.5-2.6B-GGUF",
+    "experimental": false,
+    "files": [
+      {
+        "path": "LFM2.5-2.6B-Q4_K_M.gguf",
+        "bytes": 1674455040,
+        "sha256": "02a8b7e17487d326e46d68ce0ba24211e1b80a14c4cd0597fa73c1cd697f52ed",
+        "url": "https://huggingface.co/LiquidAI/LFM2.5-2.6B-GGUF/resolve/e7caca5d835a3901a8e0d63e94009429bafafdfc/LFM2.5-2.6B-Q4_K_M.gguf"
+      }
+    ],
+    "revision": "e7caca5d835a3901a8e0d63e94009429bafafdfc",
+    "bytes": 1674455040
+  },
+  {
+    "id": "tts",
+    "name": "KittenTTS 2",
+    "role": "Speech output · experimental C++ bundle",
+    "repo": "KittenML/kitten-tts-2",
+    "experimental": true,
+    "files": [
+      {
+        "path": "cpp/model-tq2_1.gguf",
+        "bytes": 1029076832,
+        "sha256": "84f0a8b9986fbc01fbe6d4777703304d1cecc7b99e8c6fd2c607e0661e804d4c",
+        "url": "https://huggingface.co/KittenML/kitten-tts-2/resolve/f2eee74f4467855ad58fe16f1fb7b7df473263fd/cpp/model-tq2_1.gguf"
+      },
+      {
+        "path": "cpp/student_w4/decoder.pt",
+        "bytes": 312339253,
+        "sha256": "47ea803ad46a87f876c1b3b02f05e93dad15e4d2b58eafeb34884f52cdec0268",
+        "url": "https://huggingface.co/KittenML/kitten-tts-2/resolve/f2eee74f4467855ad58fe16f1fb7b7df473263fd/cpp/student_w4/decoder.pt"
+      },
+      {
+        "path": "cpp/student_w4/voices.json",
+        "bytes": 16739255,
+        "sha256": "2cd23287a80ff2ec558a5c4b90e65a2755ecd675bf72a40459afb16e3c0bd573",
+        "url": "https://huggingface.co/KittenML/kitten-tts-2/resolve/f2eee74f4467855ad58fe16f1fb7b7df473263fd/cpp/student_w4/voices.json"
+      },
+      {
+        "path": "config.json",
+        "bytes": 2196,
+        "sha256": "19dfbdd98697acefe35c8cfb2e36c1416f06ede378797b2ee9413c9c4b42fb21",
+        "url": "https://huggingface.co/KittenML/kitten-tts-2/resolve/f2eee74f4467855ad58fe16f1fb7b7df473263fd/config.json"
+      }
+    ],
+    "revision": "f2eee74f4467855ad58fe16f1fb7b7df473263fd",
+    "bytes": 1358157536
+  }
+]

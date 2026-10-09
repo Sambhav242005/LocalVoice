@@ -1,0 +1,23 @@
+{
+  "0": "dependencies",
+  "1": "useTheme",
+  "2": "scripts",
+  "3": "store.tsx",
+  "4": "expo",
+  "5": "LocalVoice implementation plan",
+  "6": "AGENTS.md",
+  "7": "LocalVoice",
+  "8": "tsconfig.json",
+  "9": "Design System: LocalVoice",
+  "10": "eslint.config.js",
+  "11": "Main dashboard",
+  "12": "pin-models.mjs",
+  "13": "Main dashboard",
+  "14": "runtime.ts",
+  "15": "LocalVoiceRuntimeModule",
+  "16": "hash-manifest.mjs",
+  "17": "build.gradle",
+  "18": "install-llama-android.ps1",
+  "19": "Native loading acceptance — 9 October 2026",
+  "20": "manifest.test.mjs"
+}
